@@ -1,0 +1,65 @@
+{
+  "name": "vite-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": " prettier --write src/**/**.{js,html,scss} && eslint --fix",
+    "format:style": "stylelint src/**/**.{css,scss} --fix --config ./.stylelintrc.json",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@vituum/vite-plugin-posthtml": "^1.1.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-pug": "^1.2.5",
+    "fast-glob": "^3.2.12",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "nodejs-logger-n": "^1.0.3",
+    "postcss": "^8.4.21",
+    "postcss-nesting": "^11.2.2",
+    "postcss-sorting": "^8.0.2",
+    "prettier": "^2.8.7",
+    "sass": "^1.60.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "stylelint-order": "^6.0.3",
+    "stylelint-prettier": "^3.0.0",
+    "stylelint-scss": "^4.6.0",
+    "svgo": "^3.0.2",
+    "vite": "^5.0.4",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-sprite-svg": "^1.1.0",
+    "vituum": "^1.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not IE 11"
+  ],
+  "lint-staged": {
+    "**/*.{js,html}": [
+      "npx prettier --write src/**/**.{js,html}",
+      "npx eslint --fix"
+    ],
+    "**/*.{css,scss}": [
+      "npx stylelint src/**/**.{css,scss} --fix --config ./.stylelintrc.json"
+    ]
+  },
+  "dependencies": {
+    "swiper": "^11.0.5"
+  }
+}

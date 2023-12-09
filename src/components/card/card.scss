@@ -1,0 +1,233 @@
+@import "/src/styles/variables.scss";
+
+@import "/src/styles/mixins.scss";
+
+.title{
+    text-align: center;
+    font-size: 4.8rem;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+
+    .card__artitle{
+        width: 36rem;
+        height: 65rem;
+    }
+
+    .title{
+        text-align: center;
+    }
+    
+    .card__imgSalat{
+        width: 28.4rem;
+        height: 28.4rem;
+        transition: transform .6s ease-in-out; 
+        
+    }
+    .card__imgSalat:hover{
+        transform: translateY(-15%) rotate(10deg);
+        transition: transform .6s ease-in-out, background-color .6s ease-in-out,; 
+        background: linear-gradient(to top left, #536614, #97C20B);
+        background-size: 25.2rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 20px rgba(83, 102, 20, 0.3);
+        
+       
+    }
+
+    .card__nameSalat{
+        color: $salat;
+        font-size: 2.4rem;
+    }
+
+    .card__description{
+        font-size: 1.4rem;
+    }
+
+    .card__price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .counter{
+            display: flex;
+           
+
+            .count__btn{
+                width: 3.2rem;
+            height: 3.2rem;
+            border-radius: .8rem;
+            background-color: transparent; 
+            color: #4A4A4A;
+            border-color: #949494;
+            border-style: solid;
+            border: 0.1rem;
+            cursor: pointer;
+            }
+            .counter__input{
+                input{
+                font-size: 2.4rem;
+                color:$salat;
+                width: 2rem;
+                background-color: white;
+                border: none;
+                }
+                
+            }
+            
+        }
+
+        .card__number{
+            display: flex;
+            align-items: center;
+            
+            gap: 2rem;
+            .ml{
+                font-size: 1.4rem;
+            }
+            .priceSalat{
+                color: $salat;
+                font-size: 2.4rem;
+            }
+        }
+
+    }
+    .card__btn{
+        display: flex;
+        justify-content: space-between;
+        
+
+       .card__buttonSalat{
+        color: $salat;
+        width: 14.6rem;
+        height: 3.2rem;
+        border-radius: 5rem;
+        background-color: transparent; 
+        border-style: solid;
+        border: 0.1rem;
+        cursor: pointer;
+       }
+
+       .card__buttonSalat:hover {
+        vertical-align: middle;
+        color: white;
+        background: linear-gradient(to bottom right, #536614, #97C20B);
+        transition: color .6s ease-in-out; 
+       }
+       .card__buttonItalian{
+        color: $italian;
+        width: 14.6rem;
+        height: 3.2rem;
+        border-radius: 5rem;
+        background-color: transparent; 
+        border-style: solid;
+        border: 0.1rem;
+        cursor: pointer;
+       }
+
+       .card__buttonItalian:hover {
+        vertical-align: middle;
+        color: white;
+        background: linear-gradient(to bottom right, #076534, #00DB69);
+        transition: color .6s ease-in-out; 
+       }
+       .card__buttonMeet{
+        color: $meet;
+        width: 14.6rem;
+        height: 3.2rem;
+        border-radius: 5rem;
+        background-color: transparent; 
+        border-style: solid;
+        border: 0.1rem;
+        cursor: pointer;
+       }
+
+       .card__buttonMeet:hover {
+        vertical-align: middle;
+        color: white;
+        background: linear-gradient(to bottom right, #99160E, #E84239);
+        transition: color .6s ease-in-out; 
+       }
+       .card__buttonEast{
+        color: $east;
+        width: 14.6rem;
+        height: 3.2rem;
+        border-radius: 5rem;
+        background-color: transparent; 
+        border-style: solid;
+        border: 0.1rem;
+        cursor: pointer;
+       }
+
+       .card__buttonEast:hover {
+        vertical-align: middle;
+        color: white;
+        background: linear-gradient(to bottom right, #BA6400, #FF9D34);
+        transition: color .6s ease-in-out; 
+       }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#container {
+  display: flex;
+}
+#container div {
+  width: 50%;
+  border: 1px solid grey;
+}
+#red {
+  background: red;
+}
+#green {
+  background: green;
+}
+@include respond-to(mobile) {
+    #red {
+        display: none;
+    }
+    #green{
+        background-color: aqua;
+    }
+  }
+@media (max-width: 976px) {
+  #red {
+    order: 1;
+  }
+  #green {
+    order: 2;
+  }
+}

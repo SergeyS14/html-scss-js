@@ -1,0 +1,55 @@
+@import "/src/styles/variables.scss";
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 26.7rem;
+  
+  .header__backgroundLogo{
+    background-color: #7DA00C;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 31.6rem;
+    height: 31.6rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 70px;
+  }
+
+  .logo{
+    margin-bottom: 1rem;
+    width: 23.2rem;
+    height: 18.7rem;
+    color: white;
+  }
+
+  .header__nav{
+    color: $salat;
+    font-size: 1.8rem;
+    
+  }
+
+  .header__list{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  .header__btn{
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    background-color: white;
+    
+  }
+}
+
+.shopping-basket{
+  color: $salat;
+  width: 4rem;
+  height: 4rem;
+}
